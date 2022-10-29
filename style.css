@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    font-family: Karla;
+    font-size: 14px;
+    
+}
+:root{
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+
+}
+body{
+    /* height: 100vh; */
+    display: flex;
+    margin: 0;
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    /* align-content: start; */
+}
+.main-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "join"
+    "monthly"
+    "why";
+    width: min-max(300px, 50vw); 
+    border-radius: 10px;
+    overflow: hidden;
+}
+.top-container{
+    grid-area: join;
+    background-color: white;
+    padding: 1em 2em;
+    width: 375px;
+
+}
+h2{
+    color: var(--Cyan);
+    font-size: 1.5em;
+}
+
+.thirty-day{
+   color: var(--Bright-Yellow);
+   font-size: 1.25em;
+}
+p{
+    color: var(--Grayish-Blue);
+    line-height: 1.75em;
+    
+}
+.middle-container{
+    grid-area: monthly;
+    background-color: var(--Cyan);
+    padding: 1em 2em;
+    width: 375px;
+
+}
+.monthly-subscription{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25em;
+    color: white;
+    margin: 0;
+    padding-top: .5em;
+
+}
+.cost-container{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: auto;
+    width: auto;
+    gap: 1em;
+
+}
+.cost{
+    color: white;
+    font-size: 2.25em;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+.per-month{
+    font-size: 1.2em;
+    color: var(--Light-Gray);
+    opacity: .6;
+
+}
+.full-access{
+    font-size: 1.1em;
+    color:white;
+    padding: 0;
+    padding-bottom: 1em;
+    margin: 0;
+
+}
+.sign-up{
+    width: 100%;
+    padding: 1.25em;
+    background-color: var(--Bright-Yellow);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    justify-self: center;
+    
+
+}
+.bottom-container{
+    grid-area: why;
+    padding: 1em 2em;
+    width: 375px;
+    background-color: var(--Cyan);
+    opacity: .9;
+    
+}
+.why-us{
+    color: white;
+    font-size: 1.25em;
+
+}
+ul{
+    /* text-align: left; */
+    line-height: 1.5rem;
+    padding: 0;    
+}
+
+li{
+    list-style: none;
+    color: white;
+    opacity: .6;
+}
+        /* desktop view */
+
+
+@media (min-width: 525px) {
+
+    .main-container{
+        align-self: center;
+        grid-template-columns: auto, auto;
+        grid-template-rows: 1fr, 1fr;
+        grid-template-areas: "join join"
+        "monthly why";
+        width: auto;
+    }
+    .top-container{
+        width: 750px;
+    }
+    body{
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+    }
+}
